@@ -195,7 +195,7 @@ The platform demonstrates strong potential for future expansion and real-world a
 
 ## 📌 Author
 
-## A. K. M. Masudur Rahman
+## A. K. M. Masudur Rahman (Gaurab)
 ### Department of Computer Science and Engineering (CSE)
 ### Bangladesh Army University of Science and Technology (BAUST), Saidpur
 ### 📧 Email: akmmasudurrahmangaurab@gmail.com
