@@ -172,13 +172,10 @@ The platform provides a smooth and engaging user experience with strong communit
 
 ## 📁 Project Structure
 
-client/ → Frontend (React)
-
-server/ → Backend (Express.js)
-
-database/ → MongoDB configurations
-
-components/ → Reusable UI components
+- client/ → Frontend (React)
+- server/ → Backend (Express.js)
+- database/ → MongoDB configurations
+- components/ → Reusable UI components
 
 ## 📌 Conclusion
 
