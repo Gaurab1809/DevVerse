@@ -1,6 +1,6 @@
 <!-- Logo on top -->
 <p align="center">
-  <img src="DevVerse_Logo.png" alt="DevVerse Logo" width="150"/>
+  <img src="DevVerse_Logou.png" alt="DevVerse Logo" width="600"/>
 </p>
 
 <!-- Title centered and purple -->
