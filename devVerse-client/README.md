@@ -74,11 +74,12 @@ cd devVerse-client
 ```
 3. Install dependencies:
 ```bash
-npm install
+npm install or npm i
 ```
 4. Start the development server:
 ```bash
 npm start
+npm run dev
 ```
 The application will run at http://localhost:3000.
 
