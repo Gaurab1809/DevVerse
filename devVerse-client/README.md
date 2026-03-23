@@ -17,7 +17,7 @@
   <img src="https://img.shields.io/badge/Frontend-React-green?style=for-the-badge">
 </p>
 
----
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
 
 ## 📌 Overview
 
@@ -27,7 +27,7 @@ It provides the **frontend interface** for developers, students, and mentors to 
 
 **Keywords:** React, Frontend, Developer community, Learning, Collaboration, Blogs, DevStudio, WebStudio.
 
----
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
 
 ## 📖 Features
 
@@ -42,7 +42,7 @@ It provides the **frontend interface** for developers, students, and mentors to 
 - 🤖 AI chatbot integration  
 - 💎 Premium membership system  
 
----
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
 
 ## 🗂️ Folder Structure
 
@@ -59,8 +59,7 @@ devVerse-client/
 ├── package.json # Project dependencies and scripts
 └── README.md # This documentation
 ```
-
----
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
 
 ## ⚙️ Installation
 
@@ -84,22 +83,25 @@ npm start
 The application will run at http://localhost:3000.
 
 Note: Make sure the server-side API is running for full functionality.
-
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
 ## 📝 Notes
 The node_modules/ folder is not included in GitHub and will be installed via npm install.
 This README is focused on the client-side functionalities only.
 Keep the backend API running for posts, blogs, messaging, leaderboard, and DevStudio to function properly.
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
 ## 🤝 Contribution
 Contributions are welcome via issues and pull requests.
 Maintain the folder structure and React coding conventions.
 For any UI or functionality additions, ensure compatibility with the server-side API.
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
 ## 🧑‍💻 Author
 
 ### A. K. M. Masudur Rahman (Gaurab)
-🎓 Department of Computer Science and Engineering (CSE)
-🏫 Bangladesh Army University of Science and Technology (BAUST), Saidpur
+🎓 Department of Computer Science and Engineering (CSE)   
+🏫 Bangladesh Army University of Science and Technology (BAUST), Saidpur   
 📧 Email: akmmasudurrahmangaurab@gmail.com
-
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
 ## ⭐ Support
 
 If you like this project, consider giving it a ⭐ on GitHub!
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
