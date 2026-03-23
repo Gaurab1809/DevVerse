@@ -1,0 +1,151 @@
+import PostComponent from "../../../Gaurab/Card/PostComponent";
+
+import { FaCommentAlt } from "react-icons/fa";
+import { useState } from "react";
+import { Link, useParams } from "react-router-dom";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+
+import SkeletonLoader from "../../../Gaurab/Card/SkeletonLoader";
+import UseAuth from "../../../Hooks/UseAuth";
+import PollData from "../../../Gaurab/Card/PollData";
+import PostActions from "../../../Gaurab/Card/PostActions";
+import UserModal from "./UserModal";
+import { Helmet } from "react-helmet";
+import UseUserPost from "../../../Hooks/UseUserPost";
+import ShareButton from "../../../Gaurab/Card/ShareButton";
+
+const UserPosts = () => {
+  const { email } = useParams();
+  const [posts, isLoading, refetch] = UseUserPost(email); // Fetch posts
+
+  const { user } = UseAuth();
+
+  const [openDropdownId, setOpenDropdownId] = useState(null);
+
+  const toggleDropdown = (id) => {
+    setOpenDropdownId((prevId) => (prevId === id ? null : id));
+  };
+
+  if (isLoading) {
+    return (
+      <div className="text-2xl text-center my-10">
+        <SkeletonLoader />
+      </div>
+    );
+  }
+
+  return (
+    <div className="p-4 mt-10 mx-auto w-full sm:w-2xl max-w-6xl ">
+      <Helmet>
+        <title>DevVerse | UserPosts</title>
+      </Helmet>
+      <h1 className="text-2xl md:text-3xl text-gray-800 dark:text-gray-100">
+        Posts : {posts?.length && posts.length}
+      </h1>
+      {posts.length > 0 ? (
+        posts.map((data, index) => (
+          <div
+            key={index}
+            className="mt-4 bg-white dark:bg-gray-900 shadow-md rounded-lg p-4 border border-gray-200 dark:border-gray-700 w-full"
+          >
+            <div className="flex flex-col md:flex-row justify-between items-start mb-3">
+              <div className="flex items-center mb-3 md:mb-0">
+                <Link to={`/users/${data?.userEmail}`}>
+                  <img
+                    src={data.profilePicture}
+                    alt="User"
+                    className="rounded-full border border-primary h-10 w-10 object-cover"
+                  />
+                </Link>
+                <div className="ml-3">
+                  <h3 className="font-semibold text-gray-800 dark:text-gray-200">
+                    {data.username}
+                  </h3>
+                  <PostComponent data={data} />
+                </div>
+              </div>
+              {user.email === data?.userEmail && (
+                <UserModal
+                  data={data}
+                  refetch={refetch}
+                  id={data._id}
+                  isOpen={openDropdownId === data._id}
+                  toggleDropdown={toggleDropdown}
+                />
+              )}
+            </div>
+
+            <h2 className="text-lg md:text-xl font-bold text-gray-800 dark:text-gray-100 mb-2">
+              {data?.title}
+            </h2>
+            {data.body && (
+              <div className="text-gray-700 dark:text-gray-300 mb-4">
+                <span
+                  dangerouslySetInnerHTML={{
+                    __html: data.body.slice(0, 200),
+                  }}
+                />
+                <Link
+                  className="text-blue-600 mt-1 block"
+                  to={`/post-details/${data._id}`}
+                >
+                  See more...
+                </Link>
+              </div>
+            )}
+
+            {data?.poll?.length > 0 && (
+              <div className="text-gray-700 dark:text-gray-300 mb-4">
+                <PollData pollPost={data} />
+              </div>
+            )}
+
+            {data.images.length && (
+              <div>
+                <img
+                  className="
+    rounded-lg 
+    mb-2 
+    w-full 
+    h-auto 
+    max-h-[500px] 
+    object-cover 
+    sm:object-contain 
+    lg:object-fill 
+    transition-all duration-300 ease-in-out
+    shadow-md
+  "
+                  src={data.images[0]}
+                  alt="Post photo"
+                />
+              </div>
+            )}
+
+            <div className="flex flex-wrap justify-between items-center text-gray-500 dark:text-gray-400 text-sm">
+              <PostActions data={data} user={user} />
+
+              <div className="flex items-center space-x-4">
+                <Link
+                  to={`/detailsWithComments/${data._id}#commentSection`}
+                  className="flex items-center space-x-1 hover:text-blue-500"
+                >
+                  <FaCommentAlt className="h-5 w-5" />
+                  <span className="text-md">{data?.comments || 0}</span>
+                </Link>
+                <ShareButton data={data}></ShareButton>
+              </div>
+            </div>
+          </div>
+        ))
+      ) : (
+        <p className="text-2xl text-gray-900 dark:text-gray-100 text-center my-10">
+          No Posts Found
+        </p>
+      )}
+    </div>
+  );
+};
+
+export default UserPosts;
