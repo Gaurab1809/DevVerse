@@ -5,7 +5,7 @@
 
 <!-- Title centered and purple -->
 <h1 align="center">
-  <span style="color:purple; font-size:36px; font-weight:bold;">🌐 DevVerse – Developer Forum & Community Platform</span>
+  <span style="color:blue; font-size:36px; font-weight:bold;">🌐 DevVerse – Developer Forum & Community Platform</span>
 </h1>
 
 <h3 align="center">
